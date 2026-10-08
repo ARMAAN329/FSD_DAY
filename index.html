@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Jobs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <h1>Recommended Jobs</h1>
+                <p>Jobs recommended based on your skills and interests.</p>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search jobs...">
+
+                <select id="categoryFilter">
+                    <option value="all">All Jobs</option>
+                    <option value="development">Development</option>
+                    <option value="design">Design</option>
+                    <option value="data">Data</option>
+                </select>
+            </div>
+        </div>
+
+
+        <!-- Job Cards -->
+        <div class="job-container" id="jobContainer">
+
+            <!-- Job 1 -->
+            <div class="job-card" data-category="development">
+
+                <div class="date">
+                    Posted Sep 03, 2026
+                </div>
+
+                <div class="job-header">
+                    <div>
+                        <h2>Frontend Developer Intern</h2>
+                        <p class="company">TechNova Labs</p>
+                    </div>
+
+                    <div class="job-icon">
+                        💻
+                    </div>
+                </div>
+
+                <p class="description">
+                    Build responsive interfaces and reusable UI components
+                    for a modern web application.
+                </p>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="project">
+                    <h3>Project Work</h3>
+                    <p>
+                        Create a responsive dashboard with job cards,
+                        search and filtering.
+                    </p>
+                </div>
+
+                <div class="card-bottom">
+                    <span class="match">94% Match</span>
+                    <button>View Job</button>
+                </div>
+
+            </div>
+
+
+            <!-- Job 2 -->
+            <div class="job-card" data-category="design">
+
+                <div class="date">
+                    Posted Sep 02, 2026
+                </div>
+
+                <div class="job-header">
+                    <div>
+                        <h2>UI/UX Design Intern</h2>
+                        <p class="company">PixelWorks</p>
+                    </div>
+
+                    <div class="job-icon">
+                        🎨
+                    </div>
+                </div>
+
+                <p class="description">
+                    Design simple and user-friendly screens and improve
+                    existing product experiences.
+                </p>
+
+                <div class="tags">
+                    <span>Figma</span>
+                    <span>UI Design</span>
+                    <span>UX</span>
+                </div>
+
+                <div class="project">
+                    <h3>Project Work</h3>
+                    <p>
+                        Redesign the job discovery experience for students.
+                    </p>
+                </div>
+
+                <div class="card-bottom">
+                    <span class="match">91% Match</span>
+                    <button>View Job</button>
+                </div>
+
+            </div>
+
+
+            <!-- Job 3 -->
+            <div class="job-card" data-category="data">
+
+                <div class="date">
+                    Posted Sep 01, 2026
+                </div>
+
+                <div class="job-header">
+                    <div>
+                        <h2>Data Analyst Intern</h2>
+                        <p class="company">DataSphere</p>
+                    </div>
+
+                    <div class="job-icon">
+                        📊
+                    </div>
+                </div>
+
+                <p class="description">
+                    Work with datasets, identify trends and create useful
+                    reports for business teams.
+                </p>
+
+                <div class="tags">
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Excel</span>
+                </div>
+
+                <div class="project">
+                    <h3>Project Work</h3>
+                    <p>
+                        Analyze user activity and create a performance report.
+                    </p>
+                </div>
+
+                <div class="card-bottom">
+                    <span class="match">88% Match</span>
+                    <button>View Job</button>
+                </div>
+
+            </div>
+
+
+            <!-- Job 4 -->
+            <div class="job-card" data-category="development">
+
+                <div class="date">
+                    Posted Aug 31, 2026
+                </div>
+
+                <div class="job-header">
+                    <div>
+                        <h2>Full Stack Developer</h2>
+                        <p class="company">BuildStack</p>
+                    </div>
+
+                    <div class="job-icon">
+                        ⚙️
+                    </div>
+                </div>
+
+                <p class="description">
+                    Work across frontend and backend systems to develop
+                    features for a SaaS product.
+                </p>
+
+                <div class="tags">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                </div>
+
+                <div class="project">
+                    <h3>Project Work</h3>
+                    <p>
+                        Build an authentication system with a protected
+                        dashboard.
+                    </p>
+                </div>
+
+                <div class="card-bottom">
+                    <span class="match">86% Match</span>
+                    <button>View Job</button>
+                </div>
+
+            </div>
+
+
+            <!-- Job 5 -->
+            <div class="job-card" data-category="data">
+
+                <div class="date">
+                    Posted Aug 30, 2026
+                </div>
+
+                <div class="job-header">
+                    <div>
+                        <h2>Machine Learning Intern</h2>
+                        <p class="company">AI Research Hub</p>
+                    </div>
+
+                    <div class="job-icon">
+                        🤖
+                    </div>
+                </div>
+
+                <p class="description">
+                    Prepare datasets, train machine learning models and
+                    evaluate their performance.
+                </p>
+
+                <div class="tags">
+                    <span>Python</span>
+                    <span>ML</span>
+                    <span>Pandas</span>
+                </div>
+
+                <div class="project">
+                    <h3>Project Work</h3>
+                    <p>
+                        Build a model that predicts customer churn.
+                    </p>
+                </div>
+
+                <div class="card-bottom">
+                    <span class="match">84% Match</span>
+                    <button>View Job</button>
+                </div>
+
+            </div>
+
+
+            <!-- Job 6 -->
+            <div class="job-card" data-category="design">
+
+                <div class="date">
+                    Posted Aug 29, 2026
+                </div>
+
+                <div class="job-header">
+                    <div>
+                        <h2>Web Designer</h2>
+                        <p class="company">Creative Studio</p>
+                    </div>
+
+                    <div class="job-icon">
+                        ✨
+                    </div>
+                </div>
+
+                <p class="description">
+                    Create clean landing pages and visual components
+                    for digital products.
+                </p>
+
+                <div class="tags">
+                    <span>Figma</span>
+                    <span>CSS</span>
+                    <span>Prototyping</span>
+                </div>
+
+                <div class="project">
+                    <h3>Project Work</h3>
+                    <p>
+                        Design a responsive landing page for a
+                        productivity app.
+                    </p>
+                </div>
+
+                <div class="card-bottom">
+                    <span class="match">82% Match</span>
+                    <button>View Job</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

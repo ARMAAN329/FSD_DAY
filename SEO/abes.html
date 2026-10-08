@@ -1,0 +1,120 @@
+<!-- List of Experiments
+1	Write HTML program for designing your institute website. Display departmental information of your institute on the website. -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background-color: #fff5f5;
+}
+
+.letterhead {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  align-items: start;
+  padding-top: 20px;
+  background-color: #b30000;
+  color: #fff;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #7a0000;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  margin-left: 15px;
+  border-radius: 4px;
+}
+
+.titles {
+  text-align: center;
+}
+
+.titles h1 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 1px 1px 2px #4d0000;
+}
+
+.titles h2 {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  margin: 5px 0 0 0;
+  letter-spacing: 1px;
+  color: #ffd6d6;
+}
+
+.titles hr {
+  border: none;
+  border-top: 1px solid #ffd6d6;
+  width: 60%;
+  margin: 8px auto;
+}
+
+/* Navigation bar */
+span {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #7a0000;
+  padding: 10px 0;
+}
+
+.testbtn {
+  background-color: #b30000;
+  color: #fff;
+  border: 2px solid #ffd6d6;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-family: Georgia, serif;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.testbtn:hover {
+  background-color: #ff4d4d;
+  transform: translateY(-2px);
+}
+
+.testbtn:active {
+  background-color: #4d0000;
+  transform: translateY(0);
+}
+
+.testbtn.active {
+  background-color: #4d0000;
+  border-color: #fff;
+  
+}
+</style>
+</head>
+<span>
+
+<header class="letterhead">
+ <img src="https://imgs.search.brave.com/P7yz_UIJOUM1D6ORBdfR-8JDaPoZNg-gzGfy52graYs/rs:fit:860:0:0:0/g:ce/aHR0cDovL3d3dy5h/ZG1pc3Npb25hZHZp/c29yLmluL2Fzc2V0/cy9mcm9udGVuZC9p/bWFnZXMvY29sbGVn/ZS9sb2dvL0FCRVNF/Qy5qcGVn" alt="ABES Logo" class="logo">
+
+  <div class="titles">
+    <h1>ABES</h1>
+    <h2>ENGINEERING COLLEGE</h2><hr>
+  
+  </div>
+  <div></div>
+</header>
+<span>
+<button class="testbtn">Home</button>
+<button class="testbtn">About Us</button>
+<button class="testbtn">Contact Us</button>
+<button class="testbtn">Departments</button>
+</span>
+
+</body>
+</html>
+
+ 
+  

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EKart - E-Cell Store</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+  body { background:#f4f4f4; }
+  header { background:#232f3e; color:#fff; padding:15px 30px; display:flex; justify-content:space-between; align-items:center; }
+  header h1 { color:#ff9900; }
+  #cartBtn { background:#ff9900; border:none; padding:8px 16px; border-radius:4px; cursor:pointer; font-weight:bold; }
+  .search-bar { padding:15px 30px; background:#37475a; display:flex; }
+  .search-bar input { flex:1; padding:8px; border-radius:4px 0 0 4px; border:none; }
+  .search-bar button { padding:8px 16px; background:#ff9900; border:none; border-radius:0 4px 4px 0; cursor:pointer; font-weight:bold; }
+  .container { padding:30px; }
+  .products { display:grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap:20px; }
+  .card { background:#fff; border-radius:8px; padding:15px; box-shadow:0 2px 6px rgba(0,0,0,0.15); text-align:center; }
+  .card img { width:100%; height:150px; object-fit:contain; margin-bottom:10px; }
+  .card h3 { font-size:16px; margin-bottom:6px; }
+  .price { color:#B12704; font-weight:bold; font-size:18px; margin:8px 0; }
+  .rating { color:#ff9900; margin-bottom:8px; }
+  .card button { background:#ff9900; border:none; padding:8px 12px; border-radius:4px; cursor:pointer; font-weight:bold; width:100%; }
+  .card button:hover { background:#e68a00; }
+
+  #cartModal { display:none; position:fixed; top:0; right:0; width:350px; height:100%; background:#fff; box-shadow:-2px 0 10px rgba(0,0,0,0.3); padding:20px; overflow-y:auto; }
+  #cartModal h2 { margin-bottom:15px; }
+  .cart-item { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ddd; padding:10px 0; }
+  .cart-item button { background:#d9534f; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; }
+  #closeCart { background:#232f3e; color:#fff; border:none; padding:8px 12px; border-radius:4px; cursor:pointer; margin-bottom:15px; }
+  #totalPrice { font-weight:bold; font-size:18px; margin-top:15px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>EKart</h1>
+  <button id="cartBtn">🛒 Cart (<span id="cartCount">0</span>)</button>
+</header>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search products...">
+  <button onclick="renderProducts()">Search</button>
+</div>
+
+<div class="container">
+  <div class="products" id="productList"></div>
+</div>
+
+<div id="cartModal">
+  <button id="closeCart">Close ✕</button>
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+  <div id="totalPrice"></div>
+</div>
+
+<script>
+const productsJSON = `
+[
+  { "id": 1, "name": "Wireless Headphones", "price": 1499, "rating": 4.3, "image": "https://via.placeholder.com/150?text=Headphones" },
+  { "id": 2, "name": "Smart Watch", "price": 2499, "rating": 4.1, "image": "https://via.placeholder.com/150?text=Smart+Watch" },
+  { "id": 3, "name": "Bluetooth Speaker", "price": 999, "rating": 4.5, "image": "https://via.placeholder.com/150?text=Speaker" },
+  { "id": 4, "name": "Laptop Backpack", "price": 799, "rating": 4.2, "image": "https://via.placeholder.com/150?text=Backpack" },
+  { "id": 5, "name": "Mechanical Keyboard", "price": 1899, "rating": 4.6, "image": "https://via.placeholder.com/150?text=Keyboard" },
+  { "id": 6, "name": "Gaming Mouse", "price": 699, "rating": 4.0, "image": "https://via.placeholder.com/150?text=Mouse" },
+  { "id": 7, "name": "USB-C Hub", "price": 1199, "rating": 4.4, "image": "https://via.placeholder.com/150?text=USB-C+Hub" },
+  { "id": 8, "name": "Power Bank 20000mAh", "price": 1299, "rating": 4.3, "image": "https://via.placeholder.com/150?text=Power+Bank" }
+]
+`;
+
+const products = JSON.parse(productsJSON);
+let cart = [];
+
+function renderProducts() {
+  const query = document.getElementById("searchInput").value.toLowerCase();
+  const list = document.getElementById("productList");
+  list.innerHTML = "";
+
+  const filtered = products.filter(p => p.name.toLowerCase().includes(query));
+
+  filtered.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${p.image}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <div class="rating">⭐ ${p.rating}</div>
+      <div class="price">₹${p.price}</div>
+      <button onclick="addToCart(${p.id})">Add to Cart</button>
+    `;
+    list.appendChild(card);
+  });
+}
+
+function addToCart(id) {
+  const product = products.find(p => p.id === id);
+  cart.push(product);
+  updateCartCount();
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCartCount();
+  renderCart();
+}
+
+function updateCartCount() {
+  document.getElementById("cartCount").textContent = cart.length;
+}
+
+function renderCart() {
+  const cartItems = document.getElementById("cartItems");
+  const totalPrice = document.getElementById("totalPrice");
+  cartItems.innerHTML = "";
+
+  let total = 0;
+  cart.forEach((item, index) => {
+    total += item.price;
+    const div = document.createElement("div");
+    div.className = "cart-item";
+    div.innerHTML = `
+      <span>${item.name} - ₹${item.price}</span>
+      <button onclick="removeFromCart(${index})">Remove</button>
+    `;
+    cartItems.appendChild(div);
+  });
+
+  totalPrice.textContent = cart.length ? `Total: ₹${total}` : "Your cart is empty";
+}
+
+document.getElementById("cartBtn").addEventListener("click", () => {
+  renderCart();
+  document.getElementById("cartModal").style.display = "block";
+});
+
+document.getElementById("closeCart").addEventListener("click", () => {
+  document.getElementById("cartModal").style.display = "none";
+});
+
+document.getElementById("searchInput").addEventListener("keyup", renderProducts);
+
+renderProducts();
+</script>
+
+</body>
+</html>

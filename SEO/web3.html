@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hindustan Transport | Truck & Container Transport</title>
+
+<meta name="description"
+content="Hindustan Transport provides reliable truck and container transportation services across India.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    color:#17202a;
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,input,textarea,select{
+    font-family:inherit;
+}
+
+.container{
+    width:min(1150px,92%);
+    margin:auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+    background:rgba(255,255,255,.97);
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.nav-container{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-icon{
+    width:45px;
+    height:45px;
+    display:grid;
+    place-items:center;
+    background:#e31e24;
+    color:#fff;
+    font-weight:800;
+    border-radius:8px;
+}
+
+.logo h2{
+    font-size:20px;
+    line-height:1;
+}
+
+.logo span{
+    font-size:9px;
+    letter-spacing:3px;
+    font-weight:700;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    gap:27px;
+}
+
+.navbar a{
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#e31e24;
+}
+
+.nav-book-btn{
+    background:#e31e24;
+    color:#fff!important;
+    padding:12px 18px;
+    border-radius:6px;
+}
+
+.nav-book-btn:hover{
+    background:#b9151b;
+}
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:0;
+    font-size:28px;
+    cursor:pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:720px;
+    padding-top:78px;
+    display:flex;
+    align-items:center;
+    position:relative;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(8,13,20,.96),
+        rgba(8,13,20,.75),
+        rgba(8,13,20,.25)
+    ),
+    url("https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2000&q=85");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-text{
+    max-width:700px;
+    color:#fff;
+}
+
+.hero-badge{
+    display:inline-block;
+    background:rgba(227,30,36,.2);
+    border:1px solid rgba(255,255,255,.3);
+    padding:9px 15px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:clamp(45px,6vw,75px);
+    line-height:1.05;
+    margin-bottom:25px;
+    font-weight:800;
+}
+
+.hero h1 span{
+    color:#ff4b50;
+    display:block;
+}
+
+.hero p{
+    max-width:600px;
+    font-size:18px;
+    color:#e2e2e2;
+    margin-bottom:32px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    border:0;
+    cursor:pointer;
+    padding:14px 23px;
+    border-radius:6px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#e31e24;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#b9151b;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid #fff;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#111;
+}
+
+.hero-stats{
+    display:flex;
+    gap:45px;
+    margin-top:60px;
+}
+
+.hero-stats div{
+    display:flex;
+    flex-direction:column;
+}
+
+.hero-stats strong{
+    font-size:20px;
+}
+
+.hero-stats span{
+    color:#c9c9c9;
+    font-size:12px;
+}
+
+
+/* ================= QUICK BOOKING ================= */
+
+.quick-booking{
+    background:#e31e24;
+    color:#fff;
+    padding:25px 0;
+}
+
+.quick-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.quick-booking span{
+    font-size:13px;
+}
+
+.quick-booking h3{
+    font-size:22px;
+}
+
+.quick-booking .btn{
+    background:#fff;
+    color:#e31e24;
+}
+
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:100px 0;
+}
+
+.section-label{
+    color:#e31e24;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 55px;
+}
+
+.section-heading h2,
+.about-content h2,
+.booking-info h2{
+    font-size:clamp(34px,5vw,50px);
+    line-height:1.1;
+    margin:12px 0 18px;
+}
+
+.section-heading h2 span,
+.about-content h2 span,
+.booking-info h2 span{
+    display:block;
+    color:#e31e24;
+}
+
+.section-heading p{
+    color:#6d737b;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:75px;
+    align-items:center;
+}
+
+.about-image{
+    position:relative;
+}
+
+.image-box{
+    height:480px;
+    border-radius:15px;
+
+    background:
+    linear-gradient(rgba(20,25,30,.25),rgba(20,25,30,.65)),
+    url("https://images.unsplash.com/photo-1586191582151-f73872dfd9e1?auto=format&fit=crop&w=1000&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:100px;
+}
+
+.experience-card{
+    position:absolute;
+    bottom:-25px;
+    right:-25px;
+    background:#e31e24;
+    color:#fff;
+    padding:22px;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+}
+
+.experience-card strong{
+    font-size:35px;
+}
+
+.experience-card span{
+    font-size:12px;
+}
+
+.about-content>p{
+    color:#69717a;
+    margin-bottom:18px;
+}
+
+.founder-box{
+    margin-top:30px;
+    padding:20px;
+    border-left:4px solid #e31e24;
+    background:#f7f7f7;
+    display:flex;
+    gap:18px;
+    align-items:center;
+}
+
+.founder-icon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#e31e24;
+    color:#fff;
+    display:grid;
+    place-items:center;
+}
+
+.founder-box small{
+    color:#e31e24;
+    font-size:10px;
+    font-weight:800;
+}
+
+.founder-box h3{
+    font-size:17px;
+}
+
+.founder-box p{
+    color:#777;
+    font-size:13px;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services-section{
+    background:#f6f7f8;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.service-card{
+    background:#fff;
+    padding:30px 24px;
+    border-radius:10px;
+    border:1px solid #eee;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
+.service-card.featured{
+    border-top:4px solid #e31e24;
+}
+
+.service-icon{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    margin-bottom:12px;
+}
+
+.service-card p{
+    color:#737980;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.service-card a{
+    color:#e31e24;
+    font-size:13px;
+    font-weight:800;
+}
+
+
+/* ================= WHY ================= */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-card{
+    text-align:center;
+    padding:30px 20px;
+}
+
+.why-card>div{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.why-card h3{
+    margin-bottom:10px;
+}
+
+.why-card p{
+    color:#737980;
+    font-size:14px;
+}
+
+
+/* ================= PROCESS ================= */
+
+.process-section{
+    background:#f6f7f8;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+}
+
+.number{
+    color:#e31e24;
+    font-size:30px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.process-card h3{
+    margin-bottom:10px;
+}
+
+.process-card p{
+    color:#747b82;
+    font-size:14px;
+}
+
+
+/* ================= BOOKING ================= */
+
+.booking-section{
+    background:linear-gradient(110deg,#111923,#202b37);
+    color:#fff;
+    padding:100px 0;
+}
+
+.booking-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:70px;
+    align-items:center;
+}
+
+.booking-info p{
+    color:#bfc5cb;
+    max-width:500px;
+}
+
+.contact-points{
+    margin-top:35px;
+    display:grid;
+    gap:18px;
+}
+
+.contact-points div{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-points span{
+    color:#aeb5bb;
+    font-size:13px;
+}
+
+.booking-form{
+    background:#fff;
+    color:#17202a;
+    padding:35px;
+    border-radius:12px;
+}
+
+.booking-form h3{
+    font-size:25px;
+}
+
+.form-subtitle{
+    color:#777;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.input-group{
+    margin-bottom:17px;
+}
+
+.input-group label{
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:7px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    width:100%;
+    padding:12px 13px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    outline:none;
+    resize:vertical;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+    border-color:#e31e24;
+}
+
+.submit-btn{
+    width:100%;
+    font-size:15px;
+}
+
+#formMessage{
+    margin-top:15px;
+    font-size:13px;
+    font-weight:600;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-card{
+    padding:35px;
+    background:#f7f7f7;
+    text-align:center;
+    border-radius:10px;
+}
+
+.contact-icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.contact-card h3{
+    margin-bottom:10px;
+}
+
+.contact-card p{
+    color:#747b82;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.contact-card a{
+    color:#e31e24;
+    font-weight:700;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#10161d;
+    color:#fff;
+    padding-top:70px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:50px;
+}
+
+.footer-brand p{
+    color:#9099a2;
+    max-width:300px;
+    margin-top:20px;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.footer-links h3{
+    margin-bottom:10px;
+}
+
+.footer-links a,
+.footer-links span{
+    color:#9099a2;
+    font-size:13px;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid #2a323a;
+    padding:20px 4%;
+    display:flex;
+    justify-content:space-between;
+    color:#77818b;
+    font-size:12px;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-btn{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+    background:#25d366;
+
+    display:grid;
+    place-items:center;
+
+    font-size:27px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+    z-index:999;
+
+    transition:.3s;
+}
+
+.whatsapp-btn:hover{
+    transform:scale(1.1);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .navbar{
+        position:absolute;
+        top:78px;
+        left:0;
+        width:100%;
+
+        background:#fff;
+
+        display:none;
+        flex-direction:column;
+
+        padding:25px;
+
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+
+    .navbar.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .services-grid,
+    .why-grid,
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid,
+    .booking-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-stats{
+        gap:20px;
+        flex-wrap:wrap;
+    }
+
+    .quick-grid{
+        flex-direction:column;
+        gap:20px;
+        align-items:flex-start;
+    }
+
+    .section{
+        padding:70px 0;
+    }
+
+    .services-grid,
+    .why-grid,
+    .process-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .booking-form{
+        padding:23px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+
+    .experience-card{
+        right:10px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+<div class="container nav-container">
+
+<a href="#home" class="logo">
+
+<div class="logo-icon">HT</div>
+
+<div>
+<h2>Hindustan</h2>
+<span>TRANSPORT</span>
+</div>
+
+</a>
+
+
+<nav class="navbar" id="navbar">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#process">How It Works</a>
+<a href="#contact">Contact</a>
+
+<a href="#booking" class="nav-book-btn">
+Book Transport
+</a>
+
+</nav>
+
+
+<button class="menu-btn" id="menuBtn">
+☰
+</button>
+
+</div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div class="hero-text">
+
+<span class="hero-badge">
+🇮🇳 TRANSPORTATION ACROSS INDIA
+</span>
+
+<h1>
+Moving India.
+<span>Connecting Businesses.</span>
+</h1>
+
+<p>
+Reliable truck and container transportation solutions
+designed to move your goods safely, efficiently and on time.
+</p>
+
+
+<div class="hero-buttons">
+
+<a href="#booking" class="btn btn-primary">
+🚛 Book a Transport
+</a>
+
+<a href="#services" class="btn btn-outline">
+Explore Services
+</a>
+
+</div>
+
+
+<div class="hero-stats">
+
+<div>
+<strong>Pan India</strong>
+<span>Service Network</span>
+</div>
+
+<div>
+<strong>24/7</strong>
+<span>Booking Support</span>
+</div>
+
+<div>
+<strong>Safe</strong>
+<span>Goods Handling</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= QUICK BOOKING ================= -->
+
+<section class="quick-booking">
+
+<div class="container quick-grid">
+
+<div>
+<span>Need a truck?</span>
+<h3>Get your transport booked today.</h3>
+</div>
+
+<a href="#booking" class="btn">
+Request a Quote →
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section" id="about">
+
+<div class="container about-grid">
+
+
+<div class="about-image">
+
+<div class="image-box">
+🚛
+</div>
+
+<div class="experience-card">
+
+<strong>HT</strong>
+<span>Hindustan Transport</span>
+
+</div>
+
+</div>
+
+
+<div class="about-content">
+
+<span class="section-label">
+ABOUT US
+</span>
+
+<h2>
+Your Trusted Partner
+<span>On Every Route.</span>
+</h2>
+
+<p>
+Hindustan Transport provides dependable truck and
+container transportation services across India.
+</p>
+
+<p>
+From pickup to final delivery, our goal is to make
+transportation simple, transparent and reliable.
+</p>
+
+
+<div class="founder-box">
+
+<div class="founder-icon">
+👤
+</div>
+
+<div>
+
+<small>FOUNDED BY</small>
+
+<h3>
+Master Ji Javed & Sameer
+</h3>
+
+<p>
+Building reliable transportation solutions for India.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section services-section" id="services">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+OUR SERVICES
+</span>
+
+<h2>
+Transport Solutions
+<span>For Your Business</span>
+</h2>
+
+<p>
+Flexible transportation options for different types
+of cargo and business requirements.
+</p>
+
+</div>
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">🚚</div>
+
+<h3>Truck Transportation</h3>
+
+<p>
+Reliable truck transportation for moving commercial
+goods across cities and states.
+</p>
+
+<a href="#booking">Book Truck →</a>
+
+</div>
+
+
+<div class="service-card featured">
+
+<div class="service-icon">🚛</div>
+
+<h3>Container Transport</h3>
+
+<p>
+Secure container transportation for long-distance
+and commercial cargo movement.
+</p>
+
+<a href="#booking">Book Container →</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">📦</div>
+
+<h3>Full Load Transport</h3>
+
+<p>
+Dedicated vehicle solutions for businesses requiring
+complete truck loads.
+</p>
+
+<a href="#booking">Get Quote →</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🛣️</div>
+
+<h3>Pan India Delivery</h3>
+
+<p>
+Transportation services connecting major cities
+and destinations across India.
+</p>
+
+<a href="#booking">Plan Route →</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+WHY HINDUSTAN TRANSPORT
+</span>
+
+<h2>
+Built Around
+<span>Your Delivery Needs</span>
+</h2>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="why-card">
+
+<div>🛡️</div>
+
+<h3>Reliable Service</h3>
+
+<p>
+We focus on dependable transportation and timely
+movement of your goods.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div>🇮🇳</div>
+
+<h3>Pan India Network</h3>
+
+<p>
+Transport solutions for routes across India.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div>📱</div>
+
+<h3>Easy Booking</h3>
+
+<p>
+Request transportation quickly through our online
+booking form.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div>💰</div>
+
+<h3>Competitive Pricing</h3>
+
+<p>
+Get a transport quote based on your specific route
+and requirements.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= PROCESS ================= -->
+
+<section class="section process-section" id="process">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+SIMPLE PROCESS
+</span>
+
+<h2>
+Book Your Transport
+<span>In 4 Steps</span>
+</h2>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="process-card">
+
+<div class="number">01</div>
+
+<h3>Send Requirement</h3>
+
+<p>
+Tell us your pickup, delivery and vehicle requirements.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="number">02</div>
+
+<h3>Get a Quote</h3>
+
+<p>
+Our team reviews your requirement and provides a quote.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="number">03</div>
+
+<h3>Confirm Booking</h3>
+
+<p>
+Confirm the transport booking with our team.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="number">04</div>
+
+<h3>Goods Delivered</h3>
+
+<p>
+Your goods are transported to the required destination.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= BOOKING ================= -->
+
+<section class="booking-section" id="booking">
+
+<div class="container booking-grid">
+
+
+<div class="booking-info">
+
+<span class="section-label">
+TRANSPORT BOOKING
+</span>
+
+<h2>
+Tell Us Where
+<span>You Need To Go.</span>
+</h2>
+
+<p>
+Fill out the form and our team will contact you regarding
+your transportation requirement.
+</p>
+
+
+<div class="contact-points">
+
+<div>
+<strong>📍 Coverage</strong>
+<span>Across India</span>
+</div>
+
+<div>
+<strong>🚛 Vehicle</strong>
+<span>Truck & Container</span>
+</div>
+
+<div>
+<strong>⏰ Support</strong>
+<span>Booking Assistance</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<form class="booking-form" id="bookingForm">
+
+<h3>Request a Transport</h3>
+
+<p class="form-subtitle">
+Enter your transportation details.
+</p>
+
+
+<div class="form-row">
+
+<div class="input-group">
+
+<label>Your Name *</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required>
+
+</div>
+
+
+<div class="input-group">
+
+<label>Phone Number *</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="10 digit mobile number"
+maxlength="10"
+required>
+
+</div>
+
+</div>
+
+
+
+<div class="form-row">
+
+<div class="input-group">
+
+<label>Pickup Location *</label>
+
+<input
+type="text"
+id="pickup"
+placeholder="e.g. Delhi"
+required>
+
+</div>
+
+
+<div class="input-group">
+
+<label>Delivery Location *</label>
+
+<input
+type="text"
+id="delivery"
+placeholder="e.g. Mumbai"
+required>
+
+</div>
+
+</div>
+
+
+
+<div class="form-row">
+
+<div class="input-group">
+
+<label>Vehicle Type</label>
+
+<select id="vehicle">
+
+<option>Truck</option>
+<option>Container</option>
+<option>Full Load</option>
+
+</select>
+
+</div>
+
+
+<div class="input-group">
+
+<label>Approx. Weight</label>
+
+<input
+type="text"
+id="weight"
+placeholder="e.g. 10 Ton">
+
+</div>
+
+</div>
+
+
+
+<div class="input-group">
+
+<label>Additional Details</label>
+
+<textarea
+id="message"
+rows="4"
+placeholder="Tell us about your goods or requirements"></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary submit-btn">
+
+🚛 Submit Booking Request
+
+</button>
+
+
+<div id="formMessage"></div>
+
+</form>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+CONTACT US
+</span>
+
+<h2>
+Let's Move Your
+<span>Goods Together.</span>
+</h2>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<div class="contact-icon">📞</div>
+
+<h3>Call Us</h3>
+
+<p>
+Speak directly with our transport team.
+</p>
+
+<!-- CHANGE PHONE NUMBER HERE -->
+
+<a href="tel:+919999999999">
++91 99999 99999
+</a>
+
+</div>
+
+
+
+<div class="contact-card">
+
+<div class="contact-icon">💬</div>
+
+<h3>WhatsApp</h3>
+
+<p>
+Send your transport requirement on WhatsApp.
+</p>
+
+<!-- CHANGE WHATSAPP NUMBER HERE -->
+
+<a
+href="https://wa.me/919999999999"
+target="_blank">
+
+Chat on WhatsApp
+
+</a>
+
+</div>
+
+
+
+<div class="contact-card">
+
+<div class="contact-icon">📍</div>
+
+<h3>Service Area</h3>
+
+<p>
+Truck and container transportation across India.
+</p>
+
+<strong>Pan India</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="container footer-grid">
+
+
+<div class="footer-brand">
+
+<div class="logo">
+
+<div class="logo-icon">
+HT
+</div>
+
+<div>
+<h2>Hindustan</h2>
+<span>TRANSPORT</span>
+</div>
+
+</div>
+
+<p>
+Reliable truck and container transportation
+services across India.
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+<h3>Quick Links</h3>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#booking">Book Transport</a>
+
+</div>
+
+
+<div class="footer-links">
+
+<h3>Services</h3>
+
+<a href="#services">Truck Transport</a>
+<a href="#services">Container Transport</a>
+<a href="#services">Full Load</a>
+<a href="#services">Pan India Delivery</a>
+
+</div>
+
+
+<div class="footer-links">
+
+<h3>Contact</h3>
+
+<a href="tel:+919999999999">
++91 99999 99999
+</a>
+
+<a href="https://wa.me/919999999999">
+WhatsApp
+</a>
+
+<span>Across India</span>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© <span id="year"></span>
+Hindustan Transport. All Rights Reserved.
+</p>
+
+<p>
+Founded by Master Ji Javed & Sameer
+</p>
+
+</div>
+
+</footer>
+
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a
+class="whatsapp-btn"
+href="https://wa.me/919999999999"
+target="_blank"
+aria-label="WhatsApp">
+
+💬
+
+</a>
+
+
+
+<script>
+
+/* ================= MOBILE MENU ================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navbar = document.getElementById("navbar");
+
+menuBtn.addEventListener("click", function(){
+
+navbar.classList.toggle("active");
+
+if(navbar.classList.contains("active")){
+    menuBtn.innerHTML = "✕";
+}else{
+    menuBtn.innerHTML = "☰";
+}
+
+});
+
+
+/* ================= CLOSE MOBILE MENU ================= */
+
+document.querySelectorAll(".navbar a").forEach(function(link){
+
+link.addEventListener("click",function(){
+
+navbar.classList.remove("active");
+menuBtn.innerHTML = "☰";
+
+});
+
+});
+
+
+/* ================= BOOKING FORM ================= */
+
+const bookingForm = document.getElementById("bookingForm");
+
+bookingForm.addEventListener("submit",function(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("name").value.trim();
+
+const phone =
+document.getElementById("phone").value.trim();
+
+const pickup =
+document.getElementById("pickup").value.trim();
+
+const delivery =
+document.getElementById("delivery").value.trim();
+
+const vehicle =
+document.getElementById("vehicle").value;
+
+const weight =
+document.getElementById("weight").value.trim();
+
+const message =
+document.getElementById("message").value.trim();
+
+const formMessage =
+document.getElementById("formMessage");
+
+
+/* PHONE VALIDATION */
+
+if(!/^[0-9]{10}$/.test(phone)){
+
+formMessage.innerHTML =
+"❌ Please enter a valid 10-digit mobile number.";
+
+formMessage.style.color = "#e31e24";
+
+return;
+
+}
+
+
+/* WHATSAPP NUMBER
+   CHANGE THIS TO REAL NUMBER */
+
+const companyWhatsApp = "919999999999";
+
+
+/* CREATE MESSAGE */
+
+const whatsappMessage =
+
+`Hello Hindustan Transport,
+
+I want to book transport.
+
+Name: ${name}
+
+Phone: ${phone}
+
+Pickup Location: ${pickup}
+
+Delivery Location: ${delivery}
+
+Vehicle Type: ${vehicle}
+
+Approx. Weight: ${weight || "Not specified"}
+
+Additional Details:
+${message || "None"}
+
+Please provide me a transport quotation.`;
+
+
+/* CREATE WHATSAPP URL */
+
+const whatsappURL =
+"https://wa.me/" +
+companyWhatsApp +
+"?text=" +
+encodeURIComponent(whatsappMessage);
+
+
+/* SUCCESS MESSAGE */
+
+formMessage.innerHTML =
+"✓ Booking request prepared. Opening WhatsApp...";
+
+formMessage.style.color = "green";
+
+
+/* OPEN WHATSAPP */
+
+setTimeout(function(){
+
+window.open(whatsappURL,"_blank");
+
+},700);
+
+
+/* RESET */
+
+bookingForm.reset();
+
+});
+
+
+/* ================= YEAR ================= */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* ================= HEADER SHADOW ================= */
+
+window.addEventListener("scroll",function(){
+
+const header =
+document.querySelector(".header");
+
+if(window.scrollY > 50){
+
+header.style.boxShadow =
+"0 4px 20px rgba(0,0,0,.12)";
+
+}else{
+
+header.style.boxShadow =
+"0 2px 15px rgba(0,0,0,.08)";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
