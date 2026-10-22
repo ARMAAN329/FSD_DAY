@@ -1,0 +1,32 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    background-color: darkblue;
+    height: 60px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    padding: 10px 15px;
+    font-size: 20px;
+    line-height: 60px;
+    transition: 0.3s ease;
+}
+
+a:hover{
+    background-color: rgb(78, 173, 232);
+    color: yellow;
+}

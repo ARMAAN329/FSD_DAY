@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(79, 183, 179);
+}
+
+h1{
+    background-color:rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(30, 30, 144);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pricing-table{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgb(99, 122, 185);
+    padding: 40px;
+}
+
+.card.basic{
+    padding: 20px 30px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.9);
+    background-color: burlywood;
+    margin: 20px;
+}
+
+.card.standard{
+    padding: 20px 30px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.9);
+    background-color: silver;
+    margin: 20px;
+}
+.card.premium{
+    padding: 20px 30px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.9);
+    background-color: gold;
+    margin: 20px;
+}
+
+button{
+    background: palevioletred;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+}
+button:hover{
+    color: rgb(3, 7, 57);
+    transition: 0.3s ease;
+    transform: scale(1.1);
+    background-color: rgb(168, 251, 211);
+}
+p{
+    text-align: center;
+    
+}
+    
